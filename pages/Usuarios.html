@@ -12,42 +12,21 @@
 </head>
 
 <body>
+  <div class="container py-2">
+   
     <h1 class="titulo">Ingreso usuarios</h1>
-    <li><a href="../index.html">Inicio</a></li>
+    <li class="link"><a  href="../index.html">Inicio</a></li>
     
-<form class="needs-validation" novalidate>
-  <div class="form-row">
-    <div class="col-md-4 mb-3">
-      <label for="validationTooltip01">First name</label>
-      <input type="text" class="form-control" id="validationTooltip01" placeholder="First name" value="Mark" required>
-      <div class="valid-tooltip">
-        Looks good!
-      </div>
-    </div>
-    <div class="col-md-4 mb-3">
-      <label for="validationTooltip02">Last name</label>
-      <input type="text" class="form-control" id="validationTooltip02" placeholder="Last name" value="Otto" required>
-      <div class="valid-tooltip">
-        Looks good!
-      </div>
-    </div>
-    <div class="col-md-4 mb-3">
-      <label for="validationTooltipUsername">Username</label>
-      <div class="input-group">
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="validationTooltipUsernamePrepend">@</span>
-        </div>
-        <input type="text" class="form-control" id="validationTooltipUsername" placeholder="Username" aria-describedby="validationTooltipUsernamePrepend" required>
-        <div class="invalid-tooltip">
-          Please choose a unique and valid username.
-          
-        </div>
-      </div>
-    </div>
-   </div>
-   <button class="btn btn-primary" type="submit">Submit form</button>
-  
-</form>
+ <form class="formulariousuarios">
+   <input id="nombre" type="text" placeholder="Ingrese su nombre" class="form-control my-2">
+   <input id="edad" type="number" placeholder="Ingrese su edad" class="form-control my-2">
+   <input id="email" type="email" placeholder="Ingrese su e-mail" class="form-control my-2">
+   <button id="boton" class="btn btn-dark" type="reset" onclick="agregar();">Enviar</button>
+ </form>
+</div>
+
+
+<script src="../js/main.js"></script>
 
 </body>
 

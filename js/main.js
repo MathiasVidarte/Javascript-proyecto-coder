@@ -18,3 +18,25 @@ function convertir (){
         alert("Se deben completar todos los campos");
     }
 }
+
+function agregar () {
+   // console.log("agregado");
+    function Cliente (nombre,edad,email){
+      this.nombre=nombre;
+      this.edad=edad;
+      this.email=email;
+    }
+  
+  var nombreAgregar = document.getElementById("nombre").value;
+  //console.log(nombreAgregar);
+  var edadAgregar =document.getElementById("edad").value;
+  //console.log(edadAgregar);
+  var emailAgregar =document.getElementById("email").value;
+  //console.log(emailAgregar);
+
+  var nuevoUsuario = new Cliente(nombreAgregar,edadAgregar,emailAgregar);
+  console.log(nuevoUsuario)
+
+  
+
+}
