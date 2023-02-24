@@ -1,7 +1,7 @@
 //alert ()
 
 function convertir (){
-
+    
     var valore = parseInt (document.getElementById("valor").value);
     var resultado = 0;
     var dolar = 40.00;
@@ -34,9 +34,15 @@ function agregar () {
   var emailAgregar =document.getElementById("email").value;
   //console.log(emailAgregar);
 
-  var nuevoUsuario = new Cliente(nombreAgregar,edadAgregar,emailAgregar);
-  console.log(nuevoUsuario)
+  nuevoUsuario = new Cliente(nombreAgregar,edadAgregar,emailAgregar);
+  console.log(nuevoUsuario);
+  guardar();
+  }
 
+  var baseDatos= [];
+  function guardar(){
+    baseDatos.push(nuevoUsuario);
+    console.log(baseDatos);
+  }
   
 
-}
