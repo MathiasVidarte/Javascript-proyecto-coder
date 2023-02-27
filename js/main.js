@@ -44,5 +44,11 @@ function agregar () {
     baseDatos.push(nuevoUsuario);
     console.log(baseDatos);
   }
+
+  function manejarclick () { 
+    alert ("Registrado con éxito")
+
+    BigInt.onclick = function(){alert("Registrado con éxito")}
+  }
   
 
