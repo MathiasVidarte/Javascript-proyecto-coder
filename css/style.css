@@ -1,53 +1,88 @@
+:root {
+    --primary-color: #f5ce52;
+}
+
 * {
     margin: 0%;
     padding: 0%;
+    box-sizing: border-box;
    }
 
-.body {
-    background-image: url(../assets/img/background\ easy\ change.jpg)
+.body{
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    padding: 20px;
+    background-color: rgb(178, 200, 241);
 }
 
-
-.titulo{padding-top: 10px;
+.titulo{padding: 20px;
         text-align: center;
         margin:0%;
         font-family: 'Rubik', sans-serif;
         }
 
-
-
-
-.formulario{ 
-              text-align: center;
-              margin: 20px;
-              padding: 10px;
-              font-size: 18px;
-              font-family: Arial, Helvetica, sans-serif;
-               }
-
-#uno { width: 50px;
-       height: 15px;
-       margin: 10px;
-     }
-#dos { width: 50px;
-    height: 15px; ;
-    }
-
-#valor {margin: 10px;
-    font-size: 15px;
-    background: fixed;
-    background-color: aliceblue;
-     }
-
-#cotizador { font-size: 15px;
-             border-radius: 20%;
-             background:fixed ;
-             background-color:rgba(33, 146, 207, 0.916);
-             font-family: 'Rubik', sans-serif;
-             padding-bottom: 3px;
-             text-decoration: none;
+  p {
+            text-align: center;
+        }
+        
+ .btn{
+            color: white;
+            background: var(--primary-color);
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 12px;
+            padding: 5px 12px;
+        }
+        
+        
+.moneda{
+            padding: 40px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
             
-       }
+        }
+        
+ .moneda select{
+            padding: 10px 20px 10px 10px;
+            border-radius: 1px;
+            }
+        
+ .moneda input {
+            border: 0;
+            font-size: 30px;
+            text-align: right;
+        }
+        
+ .taza-cambio-container{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+ .cambio{
+            color: var(--primary-color);
+            font-size: 14px;
+            padding: 0 10px;
+            font-weight: 600;
+        }
+        
+ select:focus, input:focus, button:focus{
+            outline: 0;
+        }
+        
+ @media (max-width:600px) {
+            .moneda input{
+                width: 200px;
+            }
+            
+        }
+        
 
 .formulariousuarios { width: 30%;
                     margin: 7%;
