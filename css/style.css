@@ -1,12 +1,11 @@
 * {
     margin: 0%;
     padding: 0%;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-attachment: fixed;
-    background-image: url(../assets/img/background\ easy\ change.jpg);}
+   }
 
-
+.body {
+    background-image: url(../assets/img/background\ easy\ change.jpg)
+}
 
 
 .titulo{padding-top: 10px;
@@ -59,6 +58,8 @@
         color: black;
     
   }
+
+  
 
 
 

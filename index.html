@@ -13,6 +13,7 @@
     
 </head>
 
+
 <nav class="nav">
   <a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
   <a class="nav-link" href="./pages/Usuarios.html">Ingreso Usuarios</a>
@@ -20,7 +21,7 @@
 </nav>
 
 
-<body>
+<body class="body">
 
 
   
@@ -29,24 +30,52 @@
     
    <h1 class="titulo">EasyChange</h1>
    
-      <form class="formulario">
-      
-       <p>Seleccionar moneda a recibir:</p>
-         <input type="radio" name="cambio" id="uno">Dólar
-         <input type="radio" name="cambio" id="dos">Euro
-       <p>Ingresar monto en pesos uruguayos:</p>
-         <input type="number" id="valor" min="1" max="1000000">
-         <input type="button" id="cotizador" value="Convertir" onclick="convertir()">
-         
-    
+   
+   <p>Seleccione moneda y cantidad para realizar la operación</p>
+   
+   <div class="container">
+       <div class="moneda">
+           <select id="moneda-uno">
+           
+            <option value="USD" selected>USD</option>
+            <option value="EUR">EUR</option>
+            <option value="ARS">ARS</option>
+            <option value="BRL">BRL</option>
+            <option value="UYU">UYU</option>
 
+           </select>
+       </div>
+   
+       <input  type="number" id="cantidad-uno" placeholder="0"  value="1">
+   
+       <div class="taza-cambio-container">
+        
+        <button class="btn" id="taza">cambio</button>
 
+        <div class="cambio" id="cambio"></div>
 
-     </form>
-    </div>
+       </div>
+   
+  
+      <div class="moneda">
+        <select id="moneda-dos">
+        
+         <option value="USD">USD</option>
+         <option value="EUR" selected>EUR</option>
+         <option value="ARS">ARS</option>
+         <option value="BRL">BRL</option>
+         <option value="UYU">UYU</option>
+
+        </select>
+      </div>
+  
+      <input type="number" id="cantidad-dos" placeholder="0" >
+  
+  
+  </div>
    
  
-    <script src="js/main.js"></script>
+    <script src="./js/main.js"></script>
 
 </body>
 </html>
