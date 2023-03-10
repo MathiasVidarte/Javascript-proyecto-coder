@@ -1,23 +1,47 @@
 
 
-function convertir (){
+const monedaEl_one = document.getElementById('moneda-uno');
+const monedaEl_two = document.getElementById('moneda-dos');
+const cantidadEl_one = document.getElementById('cantidad-uno');
+const cantidadEl_two = document.getElementById('cantidad-dos');
+const cambioEl = document.getElementById('cambio');
+const tazaEl = document.getElementById('taza');
+
+
+// Fetch Exchange Rate and Update the DOM
+function calculate(){
+    const moneda_one = monedaEl_one.value;
+    const moneda_two = monedaEl_two.value;
+
+   fetch(`https://api.exchangerate-api.com/v4/latest/${moneda_one}`)
+   .then(res => res.json() )
+   .then(data => {
+       const taza = data.rates[moneda_two];
+       
+       cambioEl.innerText = `1 ${moneda_one} = ${taza} ${moneda_two}`;
+
+       cantidadEl_two.value = (cantidadEl_one.value * taza).toFixed(2);
+
+    } );
     
-    var valore = parseInt (document.getElementById("valor").value);
-    var resultado = 0;
-    var dolar = 40.00;
-    var euro = 42.00;
-    if (document.getElementById("uno").checked){
-        resultado = valore / dolar;
-        alert("El cambio de Peso uruguayo a Dolares es: USD" + resultado.toFixed(2));
-    }
-    else if (document.getElementById("dos").checked){
-        resultado = valore / euro;
-        alert("El cambio de Peso uruguayo a Euro es: EU" + resultado.toFixed(2));
-    }
-    else{
-        alert("Se deben completar todos los campos");
-    }
 }
+
+//Event listeners
+monedaEl_one.addEventListener('change', calculate);
+cantidadEl_one.addEventListener('input', calculate);
+monedaEl_two.addEventListener('change', calculate);
+cantidadEl_two.addEventListener('input', calculate);
+
+taza.addEventListener('click', () =>{
+    const temp = monedaEl_one.value;
+    monedaEl_one.value = monedaEl_two.value;
+    monedaEl_two.value = temp;
+    calculate();
+} );
+
+
+calculate();
+
 
 function agregar () {
    // console.log("agregado");

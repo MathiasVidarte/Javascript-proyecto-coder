@@ -16,7 +16,7 @@
     justify-content: center;
     height: 100vh;
     margin: 0;
-    padding: 20px;
+    padding: 15px;
     background-color: rgb(178, 200, 241);
 }
 
@@ -30,15 +30,7 @@
             text-align: center;
         }
         
- .btn{
-            color: white;
-            background: var(--primary-color);
-            cursor: pointer;
-            border-radius: 5px;
-            font-size: 12px;
-            padding: 5px 12px;
-        }
-        
+ 
         
 .moneda{
             padding: 40px 0;
@@ -66,7 +58,7 @@
         }
         
  .cambio{
-            color: var(--primary-color);
+            color:darkgreen;
             font-size: 14px;
             padding: 0 10px;
             font-weight: 600;
