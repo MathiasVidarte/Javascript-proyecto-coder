@@ -8,11 +8,11 @@ const cambioEl = document.getElementById('cambio');
 const tazaEl = document.getElementById('taza');
 
 
-// Fetch Exchange Rate and Update the DOM
+// Fetch Tipo de cambio y actualización del DOM
 function calculate(){
     const moneda_one = monedaEl_one.value;
     const moneda_two = monedaEl_two.value;
-
+    
    fetch(`https://api.exchangerate-api.com/v4/latest/${moneda_one}`)
    .then(res => res.json() )
    .then(data => {
@@ -74,5 +74,7 @@ function agregar () {
 
     BigInt.onclick = function(){alert("Registrado con éxito")}
   }
+
+  
   
 
