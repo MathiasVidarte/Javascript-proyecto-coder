@@ -12,7 +12,7 @@ const tazaEl = document.getElementById('taza');
 function calculate(){
     const moneda_one = monedaEl_one.value;
     const moneda_two = monedaEl_two.value;
-    
+   
    fetch(`https://api.exchangerate-api.com/v4/latest/${moneda_one}`)
    .then(res => res.json() )
    .then(data => {
@@ -23,8 +23,10 @@ function calculate(){
        cantidadEl_two.value = (cantidadEl_one.value * taza).toFixed(2);
 
     } );
-    
+   
 }
+
+ 
 
 //Event listeners
 monedaEl_one.addEventListener('change', calculate);
@@ -75,6 +77,38 @@ function agregar () {
     BigInt.onclick = function(){alert("Registrado con éxito")}
   }
 
+
+   
+   function guardarResultadoEnLocalStorage() {
+   
+    const resultado = calculate();
+    
+ 
+    const resultadoArray = [];
+    
+    
+    resultadoArray.push(resultado);
+    
+  
+    localStorage.setItem('resultadoArray', JSON.stringify(resultadoArray));
+  }
+   function obtenerResultadoDesdeLocalStorage() {
+    
+    const resultadoArrayString = localStorage.getItem('resultadoArray');
+    
+   
+    if (resultadoArrayString) {
+      const resultadoArray = JSON.parse(resultadoArrayString);
+      
+     
+      console.log(resultadoArray);
+    } else {
+      console.log('No hay resultados guardados');
+    }
+  }
+
+
   
   
 
+  
