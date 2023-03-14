@@ -13,7 +13,7 @@ function calculate(){
     const moneda_one = monedaEl_one.value;
     const moneda_two = monedaEl_two.value;
    
-   fetch(`https://api.exchangerate-api.com/v4/latest/${moneda_one}`)
+   return fetch(`https://api.exchangerate-api.com/v4/latest/${moneda_one}`)
    .then(res => res.json() )
    .then(data => {
        const taza = data.rates[moneda_two];
@@ -22,7 +22,15 @@ function calculate(){
 
        cantidadEl_two.value = (cantidadEl_one.value * taza).toFixed(2);
 
-    } );
+       return {
+        moneda_one,
+        moneda_two,
+        cantidad_one: cantidadEl_one.value,
+        cantidad_two: cantidadEl_two.value,
+        taza,
+          };
+
+    });
    
 }
 
@@ -77,35 +85,25 @@ function agregar () {
     BigInt.onclick = function(){alert("Registrado con éxito")}
   }
 
+  function guardarResultadoEnLocalStorage() {
+    calculate().then(resultado => {
+        const resultadoArray = JSON.parse(localStorage.getItem('resultadoArray')) || [];
+        resultadoArray.push(resultado);
+        localStorage.setItem('resultadoArray', JSON.stringify(resultadoArray));
+    });
+}       
 
-   
-   function guardarResultadoEnLocalStorage() {
-   
-    const resultado = calculate();
-    
- 
-    const resultadoArray = [];
-    
-    
-    resultadoArray.push(resultado);
-    
-  
-    localStorage.setItem('resultadoArray', JSON.stringify(resultadoArray));
-  }
+
    function obtenerResultadoDesdeLocalStorage() {
-    
-    const resultadoArrayString = localStorage.getItem('resultadoArray');
-    
-   
-    if (resultadoArrayString) {
+   const resultadoArrayString = localStorage.getItem('resultadoArray');
+                          
+     if (resultadoArrayString) {
       const resultadoArray = JSON.parse(resultadoArrayString);
-      
-     
-      console.log(resultadoArray);
-    } else {
+     console.log(resultadoArray);
+     } else {
       console.log('No hay resultados guardados');
-    }
-  }
+                          }
+                      }
 
 
   
