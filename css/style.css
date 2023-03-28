@@ -10,11 +10,7 @@
 .body{
     background: rgb(136,199,242);
     font-family: Arial, Helvetica, sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: center ;
-    align-items:center ;
-    height: 100%;
+    
   
     }
 
@@ -64,16 +60,12 @@
         
 
 
-.formulariousuarios { width: 30%;
-                    margin: 7%;
-                              }
-
-
 .calculadora {
+    
            display: flex;
            flex-wrap:wrap;
-           justify-content:center;
-           align-items:center;
+           justify-content:end;
+           align-items:end;
            padding: 10px;
            border: 1px solid #ccc;
            border-radius: 5px;
@@ -82,7 +74,8 @@
            margin: 0 auto;
            box-shadow: 0px 2px 5px rgba(0,0,0,0.3);
               }
-                              
+
+                      
  .display {
        width: 100%;
        height: 50px;
@@ -136,7 +129,7 @@
                }
                   
  .loading i {
-      color:rgb(2, 77, 2);
+      color:white;
       font-size: 64px;
       -webkit-animation-name: rotar;
                 animation-name: rotar;

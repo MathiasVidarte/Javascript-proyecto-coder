@@ -75,38 +75,78 @@
 
         </select>
       </div>
+    
+     
+    <input type="number" id="cantidad-dos" placeholder="0" >
+
+    <div class="calculadora">
+      <input type="text" class="display" readonly>
+      <button class="button" onclick="addToDisplay('7')">7</button>
+      <button class="button" onclick="addToDisplay('8')">8</button>
+      <button class="button" onclick="addToDisplay('9')">9</button>
+      <button class="button operator" onclick="addToDisplay('+')">+</button>
+      <button class="button" onclick="addToDisplay('4')">4</button>
+      <button class="button" onclick="addToDisplay('5')">5</button>
+      <button class="button" onclick="addToDisplay('6')">6</button>
+      <button class="button operator" onclick="addToDisplay('-')">-</button>
+      <button class="button" onclick="addToDisplay('1')">1</button>
+      <button class="button" onclick="addToDisplay('2')">2</button>
+      <button class="button" onclick="addToDisplay('3')">3</button>
+      <button class="button operator" onclick="addToDisplay('*')">x</button>
+      <button class="button clear" onclick="clearDisplay()">C</button>
+      <button class="button" onclick="addToDisplay('0')">0</button>
+      <button class="button" onclick="addToDisplay('.')">.</button>
+      <button class="button operator" onclick="addToDisplay('/')">/</button>
+      <button class="button equal" onclick="calculadora()">=</button>
+    </div>
   
-      <input type="number" id="cantidad-dos" placeholder="0" >
+  
+  
+  </div>
+  
   <br>
   <br>
    
-      <div class="calculadora">
-        <input type="text" class="display" readonly>
-        <button class="button" onclick="addToDisplay('7')">7</button>
-        <button class="button" onclick="addToDisplay('8')">8</button>
-        <button class="button" onclick="addToDisplay('9')">9</button>
-        <button class="button operator" onclick="addToDisplay('+')">+</button>
-        <button class="button" onclick="addToDisplay('4')">4</button>
-        <button class="button" onclick="addToDisplay('5')">5</button>
-        <button class="button" onclick="addToDisplay('6')">6</button>
-        <button class="button operator" onclick="addToDisplay('-')">-</button>
-        <button class="button" onclick="addToDisplay('1')">1</button>
-        <button class="button" onclick="addToDisplay('2')">2</button>
-        <button class="button" onclick="addToDisplay('3')">3</button>
-        <button class="button operator" onclick="addToDisplay('*')">x</button>
-        <button class="button clear" onclick="clearDisplay()">C</button>
-        <button class="button" onclick="addToDisplay('0')">0</button>
-        <button class="button" onclick="addToDisplay('.')">.</button>
-        <button class="button operator" onclick="addToDisplay('/')">/</button>
-        <button class="button equal" onclick="calculadora()">=</button>
-      </div>
-    <br>
+    
 
   
   </div>
    
  
     <script src="./js/main.js"></script>
+
+ 
+
+
+  <section class="">
+  
+  <footer class="text-center text-white" style="background-color: #0a4275;">
+   
+    <div class="container p-4 pb-0">
+      
+      <section class="">
+        <p class="d-flex justify-content-center align-items-center">
+          <span class="me-3">Registráte para recibir a diario cotizaciones actualizadas de mercado:</span>
+          <button type="button" class="btn btn-outline-light btn-rounded">
+            Sign up!
+          </button>
+        </p>
+      </section>
+      
+    </div>
+   
+
+   
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2023 Copyright:
+      <a class="text-white" href="./index.html">EasyChange</a>
+    </div>
+    
+  </footer>
+
+</section>
+  
+</div>
 
 </body>
 </html>
