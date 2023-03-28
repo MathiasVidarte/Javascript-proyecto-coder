@@ -12,8 +12,8 @@
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: center ;
+    align-items:center ;
     height: 100%;
   
     }
@@ -69,8 +69,101 @@
                               }
 
 
+.calculadora {
+           display: flex;
+           flex-wrap:wrap;
+           justify-content:center;
+           align-items:center;
+           padding: 10px;
+           border: 1px solid #ccc;
+           border-radius: 5px;
+           background-color: #f7f7f7;
+           width: 300px;
+           margin: 0 auto;
+           box-shadow: 0px 2px 5px rgba(0,0,0,0.3);
+              }
+                              
+ .display {
+       width: 100%;
+       height: 50px;
+       font-size: 2em;
+       text-align: right;
+       margin-bottom: 10px;
+       padding-right: 10px;
+       border: none;
+       border-radius: 5px;
+       box-shadow: inset 0px -2px 5px rgba(0,0,0,0.3);
+            }
 
-  
+                              
+    .button {
+         font-size: 1.5em;
+         width: 50px;
+         height: 50px;
+         margin: 5px;
+         border: none;
+         border-radius: 5px;
+         box-shadow: 0px 2px 5px rgba(0,0,0,0.3);
+         cursor: pointer;
+         background-color: #eee;
+         color: #333;
+             }
+                              
+     .operator {
+         background-color: #f39c12;
+         color: #fff;
+              }
+                       
+   .clear {
+         background-color: #e74c3c;
+         color: #fff;
+             }
+                              
+ .equal {
+        background-color: #2ecc71;
+        color: #fff;
+                  }
+
+ .loading {
+      width: 100%;
+      height: 100%;
+      background-color: rgba(25, 25, 25, 0.5607843137);
+      position: fixed;
+      z-index: 500;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+               }
+                  
+ .loading i {
+      color:rgb(2, 77, 2);
+      font-size: 64px;
+      -webkit-animation-name: rotar;
+                animation-name: rotar;
+      -webkit-animation-duration: 6s;
+                animation-duration: 6s;
+      -webkit-animation-iteration-count: infinite;
+             animation-iteration-count: infinite;
+               }
+
+               @-webkit-keyframes rotar {
+                0% {
+                  transform: rotateZ(0deg);
+                }
+                100% {
+                  transform: rotateZ(360deg);
+                }
+              }
+              
+              @keyframes rotar {
+                0% {
+                  transform: rotateZ(0deg);
+                }
+                100% {
+                  transform: rotateZ(360deg);
+                }
+              }
+
 
 
 

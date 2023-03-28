@@ -1,5 +1,6 @@
 
 
+//-----------------conversor--------------------------------
 const monedaEl_one = document.getElementById('moneda-uno');
 const monedaEl_two = document.getElementById('moneda-dos');
 const cantidadEl_one = document.getElementById('cantidad-uno');
@@ -52,9 +53,10 @@ taza.addEventListener('click', () =>{
 
 
 calculate();
+//---------------------------------------------------------
 
 
-
+//-----------------------localstorage----------------------
 
 function guardarResultadosEnLocalStorage(resultado) {
   const resultadosGuardados = obtenerResultadosDeLocalStorage();
@@ -84,35 +86,47 @@ function obtenerResultadosDeLocalStorage() {
   return [];
 }
 
-                      /*function agregar () {
-                        // console.log("agregado");
-                         function Cliente (nombre,edad,email){
-                           this.nombre=nombre;
-                           this.edad=edad;
-                           this.email=email;
-                         }
+  //-----------------------------------------------------------
+
+//------------------calculadora--------------------------               
+
+    let display = document.querySelector('.display');
+
+    function addToDisplay(value) {
+     display.value += value;
+              }
+                  
+     function clearDisplay() {
+      display.value = '';
+                }
                        
-                       var nombreAgregar = document.getElementById("nombre").value;
-                       //console.log(nombreAgregar);
-                       var edadAgregar =document.getElementById("edad").value;
-                       //console.log(edadAgregar);
-                       var emailAgregar =document.getElementById("email").value;
-                       //console.log(emailAgregar);
+     function calculadora() {
+      let result = eval(display.value);
+      display.value = result;
+                 }
+  //-------------------------------------------------------               
+                    
+  
+  //----------------loading--------------------------------
+const loaderContainer = document.querySelector('.loading');
+let inicio = new Date;
+
+window.addEventListener('load', () => {
+    
+    let fin = new Date;
+    let segundos = (fin-inicio);
+
+    if(segundos < 2000){
+        setTimeout(() => {
+            loaderContainer.style.display = 'none';
+        }, 2000);
+    }else{
+        loaderContainer.style.display = 'none';
+    }
+   console.log(segundos)
+    
+});
+//--------------------------------------------------------                 
+                    
+                    
                      
-                       nuevoUsuario = new Cliente(nombreAgregar,edadAgregar,emailAgregar);
-                       console.log(nuevoUsuario);
-                       guardar();
-                       }
-                     
-                       var baseDatos= [];
-                       function guardar(){
-                         baseDatos.push(nuevoUsuario);
-                         console.log(baseDatos);
-                       }
-                     
-                       function manejarclick () { 
-                         alert ("Registrado con éxito")
-                     
-                         BigInt.onclick = function(){alert("Registrado con éxito")}
-                       }*/
-                       
