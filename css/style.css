@@ -61,7 +61,7 @@
 
 
 .calculadora {
-    
+           transform: scale(0.7);
            display: flex;
            flex-wrap:wrap;
            justify-content:end;
@@ -160,4 +160,13 @@
 
 
 
-            
+              .box {
+                display: flex;
+                justify-content: flex-start;
+                text-align: left;
+              }
+              
+              .textbox {
+                margin: 10px;
+                text-align: left;
+              }
