@@ -33,17 +33,22 @@ function calculate() {
 
       guardarResultadosEnLocalStorage(resultado);
 
-      mostrarAlerta("Conversión realizada con éxito", "success");
 
       return resultado;
     })
+    
     .catch((error) => {
       mostrarAlerta("Error al obtener tipo de cambio", "error");
       console.error(error);
     });
+
+    
 }
 
-
+function convertir() {
+  calculate();
+  mostrarAlerta("Conversión realizada con éxito", "success");
+}
 
 //Event listeners
 monedaEl_one.addEventListener('change', calculate);
@@ -147,3 +152,16 @@ function mostrarAlerta(mensaje, tipo) {
   }).showToast();
 }
 //-------------------------------------------------------------                   
+document.getElementById("taza").addEventListener("click",function(){
+
+  Toastify({
+    text: mensaje,
+    duration: 3000,
+    gravity: "top",
+    position: "right",
+    backgroundColor: tipo === "error" ? "#f44336" : "#4CAF50",
+  }).showToast();
+});
+
+
+
