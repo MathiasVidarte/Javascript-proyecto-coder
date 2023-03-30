@@ -142,7 +142,7 @@ function mostrarAlerta(mensaje, tipo) {
     text: mensaje,
     duration: 3000,
     gravity: "top",
-    position: "center",
+    position: "right",
     backgroundColor: tipo === "error" ? "#f44336" : "#4CAF50",
   }).showToast();
 }
