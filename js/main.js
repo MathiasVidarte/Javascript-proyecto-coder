@@ -33,9 +33,16 @@ function calculate() {
 
       guardarResultadosEnLocalStorage(resultado);
 
+      mostrarAlerta("Conversión realizada con éxito", "success");
+
       return resultado;
+    })
+    .catch((error) => {
+      mostrarAlerta("Error al obtener tipo de cambio", "error");
+      console.error(error);
     });
 }
+
 
 
 //Event listeners
@@ -128,5 +135,15 @@ window.addEventListener('load', () => {
 });
 //--------------------------------------------------------                 
                     
-                    
-                     
+//--------------alertsToastify--------------------------
+
+function mostrarAlerta(mensaje, tipo) {
+  Toastify({
+    text: mensaje,
+    duration: 3000,
+    gravity: "top",
+    position: "center",
+    backgroundColor: tipo === "error" ? "#f44336" : "#4CAF50",
+  }).showToast();
+}
+//-------------------------------------------------------------                   
